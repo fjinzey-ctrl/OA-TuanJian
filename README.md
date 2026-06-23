@@ -1,4 +1,4 @@
-# 少年班 2402 团支部内部公示平台
+# 团支部内部公示平台
 
 这是一个面向小规模团支部的 Cloudflare Pages OA 平台。系统提供首页、公示、团建回顾、团费缴纳、团徽团旗团歌资料、成员管理和分组站点设置，并为敏感下载生成带身份、北京时间和用途的水印副本。
 
@@ -51,7 +51,7 @@ npm.cmd run predeploy
 
 ---
 
-# Youth League Branch 2402 Internal Information Platform
+# Youth League Internal Information Platform
 
 This is a Cloudflare Pages OA platform for a small Youth League branch. It provides a home page, notices, activity reviews, membership-fee payments, official emblem/flag/song resources, member administration, and grouped site settings. Sensitive downloads receive identity-, Beijing-time-, and purpose-bound watermarks.
 
