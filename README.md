@@ -1,103 +1,81 @@
-# 团支部内部公示平台
+# OA 团建服务平台
 
-这是一个面向小规模团支部的 Cloudflare Pages OA 平台。系统提供首页、公示、团建回顾、团费缴纳、团徽团旗团歌资料、成员管理和分组站点设置，并为敏感下载生成带身份、北京时间和用途的水印副本。
+OA 团建服务平台面向多个团支部提供日常信息发布、活动回顾、团费协作、规范资料、成员管理、站内通知和支部备份等服务。不同支部的数据相互隔离，成员只能访问与自己身份和所属支部相符的内容。
 
-![桌面端首页](docs/images/validation-2026-06-22/desktop-home.png)
+本仓库仅用于展示产品功能、使用说明和收集反馈，不提供网站源代码、部署材料或内部技术文档。
 
-## 主要功能
+## 主要能力
 
-- 首页：展示问候、学号、支部信息、模块入口、个人团费状态及近期内容。
-- 公示与活动：提供独立列表和详情路由、PDF/图片预览、搜索、筛选和排序。
-- 团费与资料：展示缴费二维码和紧凑统计，并提供不强制加水印的官方团徽团旗团歌资料。
-- 账户与管理：支持 `admin`、`editor`、`member` 三种角色，以及用户、内容、附件、团费、存储和站点设置管理。
-- 安全下载：私有 R2 文件经过服务端鉴权，敏感 PDF/图片下载生成与用户绑定的水印衍生文件。
+- 支部首页：问候、近期公示、近期活动、团费状态和常用入口。
+- 公示与团建：浏览、搜索、筛选、富文本正文、图片、附件和全员可见修改记录。
+- 团费协作：查看当前团费通知、本人状态、支部成员缴纳状态及历史归档。
+- 规范资料：统一查阅和下载团徽、团旗、团歌及使用规范。
+- 个人中心：查看姓名、学号、所属支部、组织信息，更换并裁剪头像、修改密码。
+- 内容管理：编辑或管理员发布正文，自由插入图片和附件，保存草稿、发布或归档。
+- 成员管理：维护成员姓名、身份、账号状态和初始密码。
+- 通知中心：接收平台通知、支部内容更新、身份变化、备份和重要管理决定。
+- 多支部管理：系统管理员建立支部、任命管理员、维护支部资料和空间配额。
+- 支部备份：导出支部内容、附件、修改记录、成员和缴费信息，形成结构清晰的完整备份。
 
 ## 文档导航
 
-- [用户使用手册](docs/USER_GUIDE.md)：登录、首页、浏览、搜索、缴费确认、下载和个人资料。
-- [管理员使用手册](docs/ADMIN_GUIDE.md)：内容、附件、用户、角色、团费、存储和分组站点设置。
-- [开发者手册](docs/DEVELOPER_GUIDE.md)：架构、数据模型、安全控制、PDF 处理、缓存、响应式设计和测试。
-- [部署与安全手册](docs/DEPLOYMENT_AND_SECURITY.md)：Cloudflare D1、R2、Turnstile、迁移、发布和运维。
-- [安全整改记录](docs/SECURITY_REMEDIATION.md)：安全评估问题的逐项处置结果和残余风险。
+- [完整功能总览](docs/功能总览.md)
+- [成员使用指南](docs/成员使用指南.md)
+- [编辑与管理员指南](docs/编辑与管理员指南.md)
+- [系统管理员指南](docs/系统管理员指南.md)
+- [通知、备份与支部删除说明](docs/通知备份与删除说明.md)
+- [隐私与安全使用须知](docs/隐私与安全使用须知.md)
+- [问题反馈指南](docs/问题反馈指南.md)
 
-## 技术栈
+## 角色概览
 
-- Cloudflare Pages Advanced Mode（`public/_worker.js`）
-- Cloudflare D1、私有 R2 与 Turnstile
-- 原生 HTML、CSS 和 JavaScript
-- `@cantoo/pdf-lib` 与 `@pdf-lib/fontkit`
+| 身份 | 主要权限 |
+|---|---|
+| 成员 | 查阅本支部内容、确认团费状态、下载规范资料、管理本人头像和密码 |
+| 编辑 | 拥有成员能力，并可发布、修改自己负责的内容 |
+| 管理员 | 管理本支部内容、成员、团费、支部资料和空间使用情况 |
+| 系统管理员 | 管理全平台通知、公共规范资料、支部目录、容量、备份和支部管理员 |
 
-## 本地运行与验证
-
-```powershell
-npm.cmd install
-npx.cmd wrangler pages dev public --port 8788
-npm.cmd run check
-npm.cmd run verify:local
-npm.cmd run predeploy
-```
-
-本地地址为 `http://127.0.0.1:8788`。真实账户、支付二维码、私密材料和 Cloudflare 密钥不得提交到公开仓库。
-
-## PDF 与安全边界
-
-现有 PDF 采用增量更新追加水印，使原始字节、嵌入字体、页面资源、注释和尺寸保持不变。查看器权限标记不是 DRM；水印也不能阻止截图、拍照或人工转录，因此必须同时依赖服务端鉴权、私有对象存储和下载审计。
-
-## 响应式验证
-
-2026-06-22 的回归覆盖 1440px 桌面及 390–430px 手机视口，包括登录、首页、公示、活动、团费、资料、“我的”、管理首页、站点设置、空间统计和手机抽屉。验证截图位于 [`docs/images/validation-2026-06-22`](docs/images/validation-2026-06-22)。
-
-最后更新时间：2026-06-22（北京时间）
+如需报告功能问题或提出产品建议，请前往仓库 Issues，并按[问题反馈指南](docs/问题反馈指南.md)提供必要信息。请勿在公开反馈中粘贴密码、学号名单、缴费材料、内部附件或其他敏感信息。
 
 ---
 
-# Youth League Internal Information Platform
+# OA Youth League Service Platform
 
-This is a Cloudflare Pages OA platform for a small Youth League branch. It provides a home page, notices, activity reviews, membership-fee payments, official emblem/flag/song resources, member administration, and grouped site settings. Sensitive downloads receive identity-, Beijing-time-, and purpose-bound watermarks.
+The OA Youth League Service Platform provides multiple Youth League branches with daily information publishing, activity reviews, fee coordination, official resources, member administration, in-platform notifications, and branch backups. Data from different branches is isolated. Members can access only the content permitted by their role and branch affiliation.
 
-![Desktop home page](docs/images/validation-2026-06-22/desktop-home.png)
+This repository is used only to present product features, provide usage guidance, and collect feedback. It does not provide website source code, deployment materials, or internal technical documentation.
 
-## Main Features
+## Main Capabilities
 
-- Home: shows the greeting, student ID, branch information, module shortcuts, personal payment status, and recent content.
-- Notices and activities: provide separate list and detail routes, PDF/image previews, search, filtering, and sorting.
-- Fees and resources: display the payment QR code and compact statistics, and provide official emblem/flag/song materials without mandatory watermarking.
-- Accounts and administration: support the `admin`, `editor`, and `member` roles plus user, content, attachment, payment, storage, and site-settings management.
-- Protected downloads: private R2 files require server-side authorization, while sensitive PDF/image downloads produce user-bound watermarked derivatives.
+- Branch home page: greetings, recent notices, recent activities, current fee status, and common entry points.
+- Notices and activities: browsing, search, filters, rich-text content, images, attachments, and revision records visible to all authorized members.
+- Fee coordination: current fee notice, personal status, branch member payment status, and historical archives.
+- Official resources: centralized viewing and downloading of the Youth League emblem, flag, anthem, and usage guidelines.
+- Profile: view name, student ID, branch affiliation, and organization details; replace and crop the avatar; change the password.
+- Content management: editors and administrators can publish rich content, insert images and attachments freely, and save items as drafts, published content, or archives.
+- Member administration: maintain member names, roles, account status, and initial passwords.
+- Notification center: receive platform notices, branch content updates, role changes, backup updates, and important administrative decisions.
+- Multi-branch administration: system administrators can create branches, appoint administrators, and maintain branch details and storage quotas.
+- Branch backup: export branch content, attachments, revision records, member information, and fee data into a clearly organized complete backup.
 
 ## Documentation
 
-- [User Guide](docs/USER_GUIDE.md): sign-in, home, browsing, search, payment confirmation, downloads, and profile.
-- [Administrator Guide](docs/ADMIN_GUIDE.md): content, attachments, users, roles, payments, storage, and grouped site settings.
-- [Developer Guide](docs/DEVELOPER_GUIDE.md): architecture, data model, security controls, PDF processing, caching, responsive design, and testing.
-- [Deployment and Security Guide](docs/DEPLOYMENT_AND_SECURITY.md): Cloudflare D1, R2, Turnstile, migrations, releases, and operations.
-- [Security Remediation Record](docs/SECURITY_REMEDIATION.md): finding-by-finding remediation results and residual risks.
+- [Complete Feature Overview](docs/功能总览.md)
+- [Member Guide](docs/成员使用指南.md)
+- [Editor and Administrator Guide](docs/编辑与管理员指南.md)
+- [System Administrator Guide](docs/系统管理员指南.md)
+- [Notifications, Backups, and Branch Deletion](docs/通知备份与删除说明.md)
+- [Privacy and Safe-Use Notice](docs/隐私与安全使用须知.md)
+- [Feedback Guide](docs/问题反馈指南.md)
 
-## Technology Stack
+## Role Overview
 
-- Cloudflare Pages Advanced Mode (`public/_worker.js`)
-- Cloudflare D1, private R2, and Turnstile
-- Native HTML, CSS, and JavaScript
-- `@cantoo/pdf-lib` and `@pdf-lib/fontkit`
+| Role | Main permissions |
+|---|---|
+| Member | Read content from the member's branch, confirm fee status, download official resources, and manage the member's avatar and password |
+| Editor | All member capabilities, plus publishing and editing content for which the editor is responsible |
+| Administrator | Manage the branch's content, members, fees, branch details, and storage usage |
+| System administrator | Manage platform notifications, public official resources, the branch directory, storage capacity, backups, and branch administrators |
 
-## Local Run and Verification
-
-```powershell
-npm.cmd install
-npx.cmd wrangler pages dev public --port 8788
-npm.cmd run check
-npm.cmd run verify:local
-npm.cmd run predeploy
-```
-
-The local URL is `http://127.0.0.1:8788`. Never commit real accounts, payment QR codes, private materials, or Cloudflare secrets to a public repository.
-
-## PDF and Security Boundaries
-
-Existing PDFs receive watermarks through incremental updates, preserving their original bytes, embedded fonts, page resources, annotations, and dimensions. Viewer permission flags are not DRM, and watermarks cannot prevent screenshots, photography, or manual transcription. Server-side authorization, private object storage, and download auditing therefore remain mandatory.
-
-## Responsive Verification
-
-The 2026-06-22 regression covers a 1440px desktop and 390–430px mobile viewports, including sign-in, home, notices, activities, payments, resources, Profile, the administration dashboard, site settings, storage statistics, and the mobile drawer. Verification screenshots are stored in [`docs/images/validation-2026-06-22`](docs/images/validation-2026-06-22).
-
-Last updated: 2026-06-22 (Beijing Time)
+To report a problem or propose a product improvement, open a repository Issue and follow the [Feedback Guide](docs/问题反馈指南.md). Do not paste passwords, student ID lists, fee materials, internal attachments, or other sensitive information into public feedback.
