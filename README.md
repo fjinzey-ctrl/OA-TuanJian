@@ -9,7 +9,7 @@ OA 团建服务平台面向多个团支部提供日常信息发布、活动回�
 - 支部首页：问候、近期公示、近期活动、团费状态和常用入口。
 - 公示与团建：浏览、搜索、筛选、富文本正文、图片、附件和全员可见修改记录。
 - 团费协作：查看当前团费通知、本人状态、支部成员缴纳状态及历史归档。
-- 规范资料：统一查阅和下载团徽、团旗、团歌及使用规范。
+- 规范资料：无需登录即可统一查阅和下载团徽、团旗、团歌及使用规范。
 - 个人中心：查看姓名、学号、所属支部、组织信息，更换并裁剪头像、修改密码。
 - 内容管理：编辑或管理员发布正文，自由插入图片和附件，保存草稿、发布或归档。
 - 成员管理：维护成员姓名、身份、账号状态和初始密码。
@@ -51,7 +51,7 @@ This repository is used only to present product features, provide usage guidance
 - Branch home page: greetings, recent notices, recent activities, current fee status, and common entry points.
 - Notices and activities: browsing, search, filters, rich-text content, images, attachments, and revision records visible to all authorized members.
 - Fee coordination: current fee notice, personal status, branch member payment status, and historical archives.
-- Official resources: centralized viewing and downloading of the Youth League emblem, flag, anthem, and usage guidelines.
+- Official resources: view and download the Youth League emblem, flag, anthem, and usage guidelines without signing in.
 - Profile: view name, student ID, branch affiliation, and organization details; replace and crop the avatar; change the password.
 - Content management: editors and administrators can publish rich content, insert images and attachments freely, and save items as drafts, published content, or archives.
 - Member administration: maintain member names, roles, account status, and initial passwords.
