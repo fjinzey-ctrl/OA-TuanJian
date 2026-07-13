@@ -14,10 +14,12 @@ OA 团建服务平台面向多个团支部提供日常信息发布、活动回�
 - 规范资料：无需登录即可统一查阅和下载团徽、团旗、团歌及使用规范。
 - 个人中心：查看姓名、学号、所属支部、组织信息，更换并裁剪头像、修改密码。
 - 内容管理：编辑或管理员发布正文，自由插入图片和附件，保存草稿、发布或归档。
-- 成员管理：维护成员姓名、身份、账号状态和初始密码。
+- 成员管理：维护成员姓名、身份、账号状态和初始密码；移出支部时保留其平台账号、原密码、头像与历史责任记录。
 - 通知中心：接收平台通知、支部内容更新、身份变化、备份和重要管理决定。
 - 多支部管理：系统管理员建立支部、任命管理员、维护支部资料和空间配额。
 - 支部备份：导出支部内容、附件、修改记录、成员和缴费信息，形成结构清晰的完整备份。
+- 平台用户：系统管理员统一查看平台账号总数、姓名、学号与唯一支部归属，并集中执行全平台密码重置或经确认永久删除账号。
+- 未归属账号：账号离开支部后仍可登录，在重新加入支部前仅开放个人中心和系统管理员反馈引导。
 
 ## 文档导航
 
@@ -31,12 +33,12 @@ OA 团建服务平台面向多个团支部提供日常信息发布、活动回�
 
 ## 角色概览
 
-| 身份 | 主要权限 |
-|---|---|
-| 成员 | 查阅本支部内容、确认团费状态、下载规范资料、管理本人头像和密码 |
-| 编辑 | 拥有成员能力，并可发布、修改自己负责的内容 |
-| 管理员 | 管理本支部内容、成员、团费、支部资料和空间使用情况 |
-| 系统管理员 | 管理全平台通知、公共规范资料、支部目录、容量、备份和支部管理员 |
+| 身份       | 主要权限                                                                                       |
+| ---------- | ---------------------------------------------------------------------------------------------- |
+| 成员       | 查阅本支部内容、确认团费状态、下载规范资料、管理本人头像和密码                                 |
+| 编辑       | 拥有成员能力，并可发布、修改自己负责的内容                                                     |
+| 管理员     | 管理本支部内容、成员、团费、支部资料和空间使用情况；可将非管理员移出支部但不能永久删除平台账号 |
+| 系统管理员 | 管理全平台通知、公共规范资料、支部目录、容量、备份、支部管理员和平台用户账号                   |
 
 如需报告功能问题或提出产品建议，请前往仓库 Issues，并按[问题反馈指南](docs/问题反馈指南.md)提供必要信息。请勿在公开反馈中粘贴密码、学号名单、缴费材料、内部附件或其他敏感信息。
 
@@ -58,10 +60,12 @@ This repository is used only to present product features, provide usage guidance
 - Official resources: view and download the Youth League emblem, flag, anthem, and usage guidelines without signing in.
 - Profile: view name, student ID, branch affiliation, and organization details; replace and crop the avatar; change the password.
 - Content management: editors and administrators can publish rich content, insert images and attachments freely, and save items as drafts, published content, or archives.
-- Member administration: maintain member names, roles, account status, and initial passwords.
+- Member administration: maintain member names, roles, account status, and initial passwords; removing a member from a branch preserves the platform account, existing password, avatar, and historical responsibility records.
 - Notification center: receive platform notices, branch content updates, role changes, backup updates, and important administrative decisions.
 - Multi-branch administration: system administrators can create branches, appoint administrators, and maintain branch details and storage quotas.
 - Branch backup: export branch content, attachments, revision records, member information, and fee data into a clearly organized complete backup.
+- Platform users: system administrators can view the total number of accounts, names, student IDs, and each account's unique branch affiliation, and can centrally reset passwords or permanently delete an account after confirmation.
+- Unassigned accounts: an account can still sign in after leaving a branch, but only the profile and system-administrator feedback guidance are available until it joins a branch again.
 
 ## Documentation
 
@@ -75,11 +79,11 @@ This repository is used only to present product features, provide usage guidance
 
 ## Role Overview
 
-| Role | Main permissions |
-|---|---|
-| Member | Read content from the member's branch, confirm fee status, download official resources, and manage the member's avatar and password |
-| Editor | All member capabilities, plus publishing and editing content for which the editor is responsible |
-| Administrator | Manage the branch's content, members, fees, branch details, and storage usage |
-| System administrator | Manage platform notifications, public official resources, the branch directory, storage capacity, backups, and branch administrators |
+| Role                 | Main permissions                                                                                                                                                        |
+| -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Member               | Read content from the member's branch, confirm fee status, download official resources, and manage the member's avatar and password                                     |
+| Editor               | All member capabilities, plus publishing and editing content for which the editor is responsible                                                                        |
+| Administrator        | Manage the branch's content, members, fees, branch details, and storage usage; remove non-administrators from the branch without permanently deleting platform accounts |
+| System administrator | Manage platform notifications, public official resources, the branch directory, storage capacity, backups, branch administrators, and platform user accounts            |
 
 To report a problem or propose a product improvement, open a repository Issue and follow the [Feedback Guide](docs/问题反馈指南.md). Do not paste passwords, student ID lists, fee materials, internal attachments, or other sensitive information into public feedback.
