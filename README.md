@@ -2,6 +2,8 @@
 
 OA 团建服务平台面向多个团支部提供日常信息发布、活动回顾、团费协作、规范资料、成员管理、站内通知和支部备份等服务。不同支部的数据相互隔离，成员只能访问与自己身份和所属支部相符的内容。
 
+2.0 版本已于 2026-07-13 完成正式发布。浏览器标签页使用与平台左上角一致的小旗图标，便于识别网站与收藏入口。
+
 本仓库仅用于展示产品功能、使用说明和收集反馈，不提供网站源代码、部署材料或内部技术文档。
 
 ## 主要能力
@@ -43,6 +45,8 @@ OA 团建服务平台面向多个团支部提供日常信息发布、活动回�
 # OA Youth League Service Platform
 
 The OA Youth League Service Platform provides multiple Youth League branches with daily information publishing, activity reviews, fee coordination, official resources, member administration, in-platform notifications, and branch backups. Data from different branches is isolated. Members can access only the content permitted by their role and branch affiliation.
+
+Version 2.0 was formally released on July 13, 2026. The browser tab uses the same small flag icon as the platform header, making the website and saved bookmarks easy to recognize.
 
 This repository is used only to present product features, provide usage guidance, and collect feedback. It does not provide website source code, deployment materials, or internal technical documentation.
 
