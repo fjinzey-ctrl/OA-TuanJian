@@ -86,3 +86,4 @@
 - Help panels explain the page purpose, available actions, permissions, and safety notes. Error messages identify the affected object, likely cause, save state, and next action instead of exposing a bare HTTP status.
 - Complete times are labeled “Beijing Time GMT+8:00,” and reduced-motion device preferences are respected.
 - When account traffic approaches the daily free allowance, the site switches to a static peak-traffic notice. Accounts and business data remain safe, and full functionality returns automatically after the allowance resets at 08:00 Beijing time.
+- The static notice uses the same flag logo as the main site and does not read account, content, payment, or attachment data.
