@@ -8,6 +8,7 @@
 - A valid session can be restored automatically. Initial passwords must be changed, and old sessions on other devices expire after a password change.
 - The sign-in page shows only the platform product name and provides entries for branch onboarding, sign-in feedback, and public official resources.
 - Every user can crop an avatar and change the password. Names are maintained by administrators and cannot be changed by members.
+- The password form explains the 12–128 character range, passphrases, accepted characters, and password reuse guidance, and asks for the new password twice.
 - After sign-in, sign-out, or an account switch, the header, avatar, branch details, and permissions immediately match the current identity.
 
 ## Home and Navigation
@@ -22,6 +23,7 @@
 
 - Browse only published content from the member's branch, with search, filtering, sorting, and continuous same-module navigation.
 - Details support rich text, images, attachment preview, and downloads. Notice attachments and activity images can be embedded in the body.
+- Online preview covers PDFs, common text, CSV, Markdown, JSON, XML, images, MP3, DOCX, and XLSX files. Complex legacy formats retain a download option.
 - Revision records identify the operator, time, status change, and summary and are visible to authorized members.
 - Protected files display markings related to the current user during preview or download.
 
@@ -31,7 +33,8 @@
 - After selecting “I Have Paid,” the button turns green; an administrator verifies the final status.
 - Without an active fee notice, payment status cannot be changed and misleading payment entry points are hidden.
 - Administrators can verify members individually or in batches. Each fee notice has only one active member-by-member archive.
-- Archives can be expanded, deleted, or revoked with a reason when allowed, and a revoked archive can be recreated.
+- Archiving always saves a complete snapshot and resets current member statuses to unpaid. Archives can be expanded, deleted, or revoked with a reason when allowed, and a revoked archive can be recreated.
+- A direct fee-page link returns to the fee page after sign-in or the required first password change.
 
 ## Emblem, Flag, Anthem, and Official Resources
 
@@ -42,6 +45,7 @@
 ## Content and Attachments
 
 - Editors and administrators can create notices, activities, and fee content as drafts, published items, or archives.
+- Editors and administrators can view storage statistics scoped to their own branch.
 - The editor supports headings, lists, quotations, links, alignment, images, and freely inserted attachments.
 - Files can be selected, dragged, or pasted, with upload progress. Each attachment follows the size guidance shown on the page.
 - The publisher is the current user's name and cannot be hidden or changed. Revision logs are appended automatically.
