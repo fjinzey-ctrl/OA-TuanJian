@@ -15,7 +15,8 @@
 - Show a Beijing-time greeting, recent notices, activities, fee status, and common entry points in one place.
 - Feature cards are fully selectable and retain “Click to View.” Clear empty states appear when no notice, activity, or fee item is available.
 - Desktop navigation can collapse, temporarily reveal, and pin open again. Details pages provide same-module navigation and a location trail.
-- Mobile uses bottom navigation, while administrators, editors, and system administrators can enter the management workspace directly from the header.
+- Phones use five direct navigation choices: Home, Notices, Activities, Fees, and Mine. Each main module includes a question-mark feature overview for first-time users; administrators, editors, and system administrators can enter the management workspace directly from the header.
+- On phones, Home sits in the center of the bottom navigation with an emphasized icon; everyday modules are arranged around it.
 
 ## Notices and Activities
 
@@ -59,7 +60,7 @@
 ## Notification Center
 
 - Automatically receive platform releases, branch settings, content publications or updates, role changes, account security, backups, and deletion decisions.
-- Unread items are clearly marked and become read after opening. Details support rich text, images, attachments, and related-page links.
+- Unread items are clearly marked and become read after opening. Once the bell is opened, previously counted unread messages are represented by a dot; only later unread messages restore the number. Phones use an easy-to-close bottom notification panel. Details support rich text, images, attachments, and related-page links.
 - Administrative notices include the operator, Beijing time, and detailed changes. Deletion decisions are sent to all affected branch members.
 - System administrators can publish flexible notifications and search both manual and automatic archives by category, scope, and keyword.
 
@@ -74,6 +75,9 @@
 
 ## Multi-Device Experience
 
-- Long titles, paths, tables, rich text, and file previews adapt to narrow screens without page-level horizontal overflow.
+- Long titles, paths, tables, rich text, and file previews adapt to narrow screens without page-level horizontal overflow. Important text wraps instead of being hidden by an ellipsis.
+- PDFs open fitted to the preview width and support continuous downward reading. The first two pages render first, later pages load progressively, and touch devices support pinch zoom.
 - Uploads, downloads, saves, archives, and backups provide loading, progress, or completion feedback.
+- Published titles are centered and automatically shrink to one line when no subtitle is present. English body text prefers Times New Roman, Chinese text falls back to FangSong, and code blocks use Calibri.
+- Help panels explain the page purpose, available actions, permissions, and safety notes. Error messages identify the affected object, likely cause, save state, and next action instead of exposing a bare HTTP status.
 - Complete times are labeled “Beijing Time GMT+8:00,” and reduced-motion device preferences are respected.

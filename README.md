@@ -4,6 +4,8 @@ OA 团建服务平台面向多个团支部提供信息发布、活动回顾、�
 
 2.0 已于 2026-07-13 正式发布。本仓库仅用于介绍完整功能、提供使用指南和收集反馈，不提供源代码、部署材料或内部技术文档。
 
+2026-07-14 内测跟进已同步：适应页宽的连续 PDF、发布标题与中英文字体规则、详细功能帮助、手机表单布局，以及文件上传和团费归档撤销的可操作错误说明。
+
 ## 主要能力
 
 - 登录与反馈：页面加载后开始安全检测，验证前不可提交；访客可直接申请支部入驻或反馈登录问题。
@@ -12,7 +14,7 @@ OA 团建服务平台面向多个团支部提供信息发布、活动回顾、�
 - 成员与账号：普通账号全平台唯一且最多属于一个支部；移出支部不删除账号、密码、头像或历史责任记录。
 - 通知中心：自动接收平台升级、设置与内容变化、身份调整、备份和管理决定，并展示操作人、时间与变更详情。
 - 支部治理：系统管理员维护支部、容量、备份、删除审批、公共资料和平台用户；支部唯一管理员受到保护。
-- 多端体验：桌面侧栏、手机底部导航、管理快捷入口、窄屏排版和全流程进度反馈均已适配。
+- 多端体验：桌面侧栏与手机专用五项底部导航分别适配；每个主要模块提供功能概览，窄屏长文字保持可读，通知在手机端以易关闭的面板展示。
 
 ## 文档
 
@@ -52,7 +54,7 @@ Version 2.0 was formally released on July 13, 2026. This repository presents com
 - Members and accounts: each ordinary account is unique across the platform and belongs to at most one branch. Removal from a branch preserves the account, password, avatar, and historical responsibility records.
 - Notification center: automatically receive platform releases, settings and content changes, role updates, backups, and administrative decisions with the operator, time, and detailed changes.
 - Branch governance: system administrators maintain branches, capacity, backups, deletion approval, public resources, and platform users. Every branch's sole administrator is protected.
-- Multi-device experience: desktop side navigation, mobile bottom navigation, management shortcuts, narrow-screen layout, and progress feedback are adapted throughout the product.
+- Multi-device experience: desktop side navigation and a phone-specific five-item bottom navigation are provided. Each main module includes a quick feature overview, long text remains readable on narrow screens, and notifications open in an easy-to-close mobile panel.
 
 ## Documentation
 
