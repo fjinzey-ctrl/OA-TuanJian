@@ -23,7 +23,7 @@
 
 - Browse only published content from the member's branch, with search, filtering, sorting, and continuous same-module navigation.
 - Details support rich text, images, attachment preview, and downloads. Notice attachments and activity images can be embedded in the body.
-- Online preview covers PDFs, common text, CSV, Markdown, JSON, XML, images, MP3, DOCX, and XLSX files. Complex legacy formats retain a download option.
+- Online preview covers PDFs, TXT/LOG, CSV, Markdown, JSON, XML, images, DOCX, and XLSX files. Historical TXT metadata with charset parameters is recognized correctly. Audio and complex legacy formats show download only, without a non-working preview control.
 - Revision records identify the operator, time, status change, and summary and are visible to authorized members.
 - Protected files display markings related to the current user during preview or download.
 
@@ -85,3 +85,4 @@
 - Published titles are centered and automatically shrink to one line when no subtitle is present. English body text prefers Times New Roman, Chinese text falls back to FangSong, and code blocks use Calibri.
 - Help panels explain the page purpose, available actions, permissions, and safety notes. Error messages identify the affected object, likely cause, save state, and next action instead of exposing a bare HTTP status.
 - Complete times are labeled “Beijing Time GMT+8:00,” and reduced-motion device preferences are respected.
+- When account traffic approaches the daily free allowance, the site switches to a static peak-traffic notice. Accounts and business data remain safe, and full functionality returns automatically after the allowance resets at 08:00 Beijing time.

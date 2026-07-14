@@ -6,7 +6,7 @@ OA 团建服务平台面向多个团支部提供信息发布、活动回顾、�
 
 2026-07-14 内测跟进已同步：适应页宽的连续 PDF、发布标题与中英文字体规则、详细功能帮助、手机表单布局，以及文件上传和团费归档撤销的可操作错误说明。
 
-最新跟进补充通知跳转自动收起、团费深链回跳、归档后默认重置、清晰的改密规则、编辑空间统计，以及文本、表格、Word、图片和音频等更多附件预览。
+最新跟进补充通知跳转自动收起、团费深链回跳、归档后默认重置、清晰的改密规则、编辑空间统计，以及文本、表格、Word 和图片等更多附件预览。历史 TXT 类型现已兼容；无法可靠预览的音频等附件只显示下载。访问量接近每日免费额度时，平台会暂时展示静态高峰提示并在额度重置后恢复。
 
 ## 主要能力
 
@@ -31,12 +31,12 @@ OA 团建服务平台面向多个团支部提供信息发布、活动回顾、�
 
 ## 角色
 
-| 身份       | 主要权限                                                                                       |
-| ---------- | ---------------------------------------------------------------------------------------------- |
-| 成员       | 查阅本支部内容、确认团费状态、使用规范资料、管理本人头像和密码                                 |
-| 编辑       | 拥有成员能力，可发布、修改自己负责的内容并查看本支部空间统计                                   |
-| 管理员     | 管理本支部内容、成员、团费、资料和空间；可移出非管理员但不能永久删除平台账号                   |
-| 系统管理员 | 管理平台通知、公共资料、支部目录、容量、备份、支部管理员和平台用户账号                         |
+| 身份       | 主要权限                                                                     |
+| ---------- | ---------------------------------------------------------------------------- |
+| 成员       | 查阅本支部内容、确认团费状态、使用规范资料、管理本人头像和密码               |
+| 编辑       | 拥有成员能力，可发布、修改自己负责的内容并查看本支部空间统计                 |
+| 管理员     | 管理本支部内容、成员、团费、资料和空间；可移出非管理员但不能永久删除平台账号 |
+| 系统管理员 | 管理平台通知、公共资料、支部目录、容量、备份、支部管理员和平台用户账号       |
 
 如需反馈，请前往仓库 Issues 并遵循[问题反馈指南](docs/问题反馈指南.md)。请勿公开密码、成员名单、缴费材料、内部附件或其他敏感信息。
 
@@ -47,6 +47,8 @@ OA 团建服务平台面向多个团支部提供信息发布、活动回顾、�
 The OA Youth League Service Platform provides multiple Youth League branches with information publishing, activity reviews, fee coordination, official resources, member administration, notifications, backups, and platform governance. Branch data is isolated, and members can access only content permitted by their role and branch affiliation.
 
 Version 2.0 was formally released on July 13, 2026. This repository presents complete product capabilities, user guides, and feedback channels only. It does not provide source code, deployment materials, or internal technical documentation.
+
+The latest update fixes previewing for historical TXT metadata, hides preview controls for unsupported files such as anthem audio, and temporarily switches to a static peak-traffic notice when daily service usage approaches the free allowance. Full access resumes after the allowance resets.
 
 ## Main Capabilities
 
@@ -71,11 +73,11 @@ Version 2.0 was formally released on July 13, 2026. This repository presents com
 
 ## Roles
 
-| Role                 | Main permissions                                                                                                                                                   |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Member               | Read branch content, confirm fee status, use official resources, and manage the member's avatar and password                                                       |
-| Editor               | All member capabilities, plus publishing and editing content for which the editor is responsible                                                                   |
-| Administrator        | Manage branch content, members, fees, details, and storage; remove non-administrators without permanently deleting platform accounts                              |
-| System administrator | Manage platform notifications, public resources, the branch directory, capacity, backups, branch administrators, and platform user accounts                       |
+| Role                 | Main permissions                                                                                                                            |
+| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| Member               | Read branch content, confirm fee status, use official resources, and manage the member's avatar and password                                |
+| Editor               | All member capabilities, plus publishing and editing content for which the editor is responsible                                            |
+| Administrator        | Manage branch content, members, fees, details, and storage; remove non-administrators without permanently deleting platform accounts        |
+| System administrator | Manage platform notifications, public resources, the branch directory, capacity, backups, branch administrators, and platform user accounts |
 
 To provide feedback, open a repository Issue and follow the [Feedback Guide](docs/问题反馈指南.md). Do not publicly share passwords, member lists, fee materials, internal attachments, or other sensitive information.
