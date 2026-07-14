@@ -2,13 +2,15 @@
 
 OA 团建服务平台面向多个团支部提供信息发布、活动回顾、团费协作、规范资料、成员管理、通知、备份和平台治理。不同支部数据相互隔离，成员只能访问与本人身份和所属支部相符的内容。
 
-2.0 已于 2026-07-13 正式发布。本仓库仅用于介绍完整功能、提供使用指南和收集反馈，不提供源代码、部署材料或内部技术文档。
+2.1 已于 2026-07-15 完成内测修复并正式发布。本仓库仅用于介绍完整功能、提供使用指南和收集反馈，不提供源代码、部署材料或内部技术文档。
 
 2026-07-14 内测跟进已同步：适应页宽的连续 PDF、发布标题与中英文字体规则、详细功能帮助、手机表单布局，以及文件上传和团费归档撤销的可操作错误说明。
 
 最新跟进补充通知跳转自动收起、团费深链回跳、归档后默认重置、清晰的改密规则、编辑空间统计，以及文本、表格、Word 和图片等更多附件预览。历史 TXT 类型现已兼容；无法可靠预览的音频等附件只显示下载。访问量接近每日免费额度时，平台会暂时展示静态高峰提示并在额度重置后恢复。
 
 静态高峰提示页使用与正式站点一致的小旗标识，不会读取账号、内容、团费或附件数据。
+
+平台每 10 分钟检查一次账号级免费请求额度；达到 80% 保护阈值后启用静态高峰提示，额度重置后自动恢复。
 
 ## 主要能力
 
@@ -48,9 +50,11 @@ OA 团建服务平台面向多个团支部提供信息发布、活动回顾、�
 
 The OA Youth League Service Platform provides multiple Youth League branches with information publishing, activity reviews, fee coordination, official resources, member administration, notifications, backups, and platform governance. Branch data is isolated, and members can access only content permitted by their role and branch affiliation.
 
-Version 2.0 was formally released on July 13, 2026. This repository presents complete product capabilities, user guides, and feedback channels only. It does not provide source code, deployment materials, or internal technical documentation.
+Version 2.1 completed its beta-fix cycle and was formally released on July 15, 2026. This repository presents complete product capabilities, user guides, and feedback channels only. It does not provide source code, deployment materials, or internal technical documentation.
 
 The latest update fixes previewing for historical TXT metadata, hides preview controls for unsupported files such as anthem audio, and temporarily switches to a static peak-traffic notice when daily service usage approaches the free allowance. Full access resumes after the allowance resets.
+
+The platform checks the account-level free request allowance every 10 minutes. At the 80% protection threshold, it enables the static peak-traffic notice and restores full access after the allowance resets.
 
 ## Main Capabilities
 
