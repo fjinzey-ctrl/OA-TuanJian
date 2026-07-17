@@ -2,7 +2,7 @@
 
 OA 团建服务平台面向多个团支部提供信息发布、活动回顾、团费协作、规范资料、成员管理、通知、备份和平台治理。不同支部数据相互隔离，成员只能访问与本人身份和所属支部相符的内容。
 
-2.1 已于 2026-07-15 完成内测修复并正式发布。本仓库仅用于介绍完整功能、提供使用指南和收集反馈，不提供源代码、部署材料或内部技术文档。
+2.1 完善版已于 2026-07-18 正式发布。本仓库仅用于介绍完整功能、提供使用指南和收集反馈，不提供源代码、部署材料或内部技术文档。
 
 2026-07-14 内测跟进已同步：适应页宽的连续 PDF、发布标题与中英文字体规则、详细功能帮助、手机表单布局，以及文件上传和团费归档撤销的可操作错误说明。
 
@@ -15,6 +15,8 @@ OA 团建服务平台面向多个团支部提供信息发布、活动回顾、�
 2026-07-17 的 2.1 完善 Preview 增加正文图片高度、团建指定封面、平台用户批量冻结、五类通知存档，以及默认/图床/本地文件三种头像来源。外链头像通过本站安全检查后复制保存；短时大量下载、多网络来源登录和反复危险链接会形成只面向系统管理员的“安全提醒”，不记录原始 IP、完整链接或附件正文。
 
 最新修补进一步明确图片文件的生命周期：关闭附件区显示不会破坏正文图片；只有图片也从正文和团建封面移除并确认保存后，系统才清理源文件。平台用户卡片补充头像并优化批量选择排版；冻结账号会直接显示“账号被冻结”。外链头像若实际返回网页或安全验证页，会明确提示改用可直接返回图片文件的公开地址。
+
+2026-07-18 正式收尾进一步统一空间统计口径：来源文件、水印衍生文件和支部头像都计入对应支部的 1.5 GiB 默认限额，并在系统管理页分项展示。新产生的内容修改记录会具体列出标题、摘要、正文文字和发布设置的变化。版本号继续保持 2.1。
 
 ## 主要能力
 
@@ -55,7 +57,7 @@ OA 团建服务平台面向多个团支部提供信息发布、活动回顾、�
 
 The OA Youth League Service Platform provides multiple Youth League branches with information publishing, activity reviews, fee coordination, official resources, member administration, notifications, backups, and platform governance. Branch data is isolated, and members can access only content permitted by their role and branch affiliation.
 
-Version 2.1 completed its beta-fix cycle and was formally released on July 15, 2026. This repository presents complete product capabilities, user guides, and feedback channels only. It does not provide source code, deployment materials, or internal technical documentation.
+Version 2.1 Refinement was formally released on July 18, 2026. This repository presents complete product capabilities, user guides, and feedback channels only. It does not provide source code, deployment materials, or internal technical documentation.
 
 The latest update fixes previewing for historical TXT metadata, hides preview controls for unsupported files such as anthem audio, and temporarily switches to a static peak-traffic notice when daily service usage approaches the free allowance. Full access resumes after the allowance resets.
 

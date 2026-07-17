@@ -97,3 +97,9 @@ Rich-text images are inserted at the current cursor as centered block media. Edi
 - System administrators can batch-freeze, unfreeze, or require password changes while sole-administrator protections remain enforced.
 - Notification archives are grouped into five operational categories and include a system-administrator-only security-alert class.
 - Help dialogs separate purpose, common actions, and cautions with four semantic colors and direct, non-promotional language.
+
+# 2.1 Production Wrap-up (2026-07-18)
+
+- Branch usage is based on actual R2 ownership. Source files, watermark derivatives, and branch avatars all count toward the same branch quota and are shown as separate totals to system administrators.
+- New content revision entries show the actual title, summary, body-text, publishing-setting, formatting, and activity-cover changes. Existing historical summaries remain unchanged.
+- The visible product version remains 2.1.
