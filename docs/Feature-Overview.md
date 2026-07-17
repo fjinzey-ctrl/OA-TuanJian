@@ -87,3 +87,6 @@
 - Complete times are labeled “Beijing Time GMT+8:00,” and reduced-motion device preferences are respected.
 - The platform checks the account-level free request allowance every 10 minutes. At the 80% protection threshold, the site switches to a static peak-traffic notice. Accounts and business data remain safe, and full functionality returns automatically after the allowance resets at 08:00 Beijing time.
 - The static notice uses the same flag logo as the main site and does not read account, content, payment, or attachment data.
+# 2.1 Refinement (2026-07-17)
+
+Rich-text images are inserted at the current cursor as centered block media. Editors independently control body placement and attachment-list visibility. Branch storage now includes source objects, watermarked derivatives, and avatars with a 1.5 GiB default quota. Published saves open the member-facing page, Turnstile offers recoverable retries without bypassing server verification, and transparent avatar crops preserve alpha.

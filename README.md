@@ -87,3 +87,6 @@ The platform checks the account-level free request allowance every 10 minutes. A
 | System administrator | Manage platform notifications, public resources, the branch directory, capacity, backups, branch administrators, and platform user accounts |
 
 To provide feedback, open a repository Issue and follow the [Feedback Guide](docs/问题反馈指南.md). Do not publicly share passwords, member lists, fee materials, internal attachments, or other sensitive information.
+# 2026-07-17 · 2.1 使用说明更新
+
+通知和内容编辑现支持在光标位置插入居中图片，并分别控制正文与附件区显示；已发布内容保存后会自动进入成员端页面。空间统计包含源文件、水印衍生文件与头像，支部默认空间为 1.5 GiB。透明背景头像现在会保留透明区域。
