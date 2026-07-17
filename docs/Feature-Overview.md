@@ -90,3 +90,10 @@
 # 2.1 Refinement (2026-07-17)
 
 Rich-text images are inserted at the current cursor as centered block media. Editors independently control body placement and attachment-list visibility. Branch storage now includes source objects, watermarked derivatives, and avatars with a 1.5 GiB default quota. Published saves open the member-facing page, Turnstile offers recoverable retries without bypassing server verification, and transparent avatar crops preserve alpha.
+# July 17, 2026 Preview refinement
+
+- Body images have adjustable heights, and an activity can select an explicit cover independently from body and attachment visibility.
+- Avatars can use the default, a public HTTPS image URL, or a local file. Every source uses the same circular crop flow; remote images are validated and copied into platform storage.
+- System administrators can batch-freeze, unfreeze, or require password changes while sole-administrator protections remain enforced.
+- Notification archives are grouped into five operational categories and include a system-administrator-only security-alert class.
+- Help dialogs separate purpose, common actions, and cautions with four semantic colors and direct, non-promotional language.

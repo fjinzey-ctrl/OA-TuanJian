@@ -12,6 +12,8 @@ OA 团建服务平台面向多个团支部提供信息发布、活动回顾、�
 
 平台每 10 分钟检查一次账号级免费请求额度；达到 80% 保护阈值后启用静态高峰提示，额度重置后自动恢复。
 
+2026-07-17 的 2.1 完善 Preview 增加正文图片高度、团建指定封面、平台用户批量冻结、五类通知存档，以及默认/图床/本地文件三种头像来源。外链头像通过本站安全检查后复制保存；短时大量下载、多网络来源登录和反复危险链接会形成只面向系统管理员的“安全提醒”，不记录原始 IP、完整链接或附件正文。
+
 ## 主要能力
 
 - 登录与反馈：页面加载后开始安全检测，验证前不可提交；访客可直接申请支部入驻或反馈登录问题。
@@ -20,6 +22,7 @@ OA 团建服务平台面向多个团支部提供信息发布、活动回顾、�
 - 成员与账号：普通账号全平台唯一且最多属于一个支部；移出支部不删除账号、密码、头像或历史责任记录。
 - 通知中心：自动接收平台升级、设置与内容变化、身份调整、备份和管理决定，并展示操作人、时间与变更详情。
 - 支部治理：系统管理员维护支部、容量、备份、删除审批、公共资料和平台用户；支部唯一管理员受到保护。
+- 账号安全：系统管理员可冻结或批量管理平台账号；安全提醒使用哈希和计数发现明显异常，不展示用户原始网络地址或外链内容。
 - 多端体验：桌面侧栏与手机专用五项底部导航分别适配；每个主要模块提供功能概览，窄屏长文字保持可读，通知在手机端以易关闭的面板展示。
 
 ## 文档
@@ -55,6 +58,8 @@ Version 2.1 completed its beta-fix cycle and was formally released on July 15, 2
 The latest update fixes previewing for historical TXT metadata, hides preview controls for unsupported files such as anthem audio, and temporarily switches to a static peak-traffic notice when daily service usage approaches the free allowance. Full access resumes after the allowance resets.
 
 The platform checks the account-level free request allowance every 10 minutes. At the 80% protection threshold, it enables the static peak-traffic notice and restores full access after the allowance resets.
+
+The July 17 Preview adds resizable body images, explicit activity covers, batch account freezing, five archive categories, and default/URL/local avatar sources. Remote avatars are validated and copied into platform storage. Security alerts use counts and irreversible hashes rather than raw IP addresses, full URLs, or attachment contents.
 
 ## Main Capabilities
 
