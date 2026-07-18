@@ -4,9 +4,11 @@
 
 ## Sign-In and Accounts
 
+- Opening the root site first shows the product introduction page. “Sign In” opens the dedicated sign-in page, while “View Public Files” opens public resources directly.
+- The embedded product windows use fictional information to demonstrate structure and basic interactions. They do not read real accounts, branches, fee records, attachments, or database data.
 - Sign in with the assigned student ID and password. Security checks begin when the page loads, and submission is unavailable until verification completes.
 - A valid session can be restored automatically. Initial passwords must be changed, and old sessions on other devices expire after a password change.
-- The sign-in page shows only the platform product name and provides entries for branch onboarding, sign-in feedback, and public official resources.
+- The sign-in page uses the platform's warm visual palette and provides entries for branch onboarding, sign-in feedback, and public files.
 - Every user can crop an avatar and change the password. Names are maintained by administrators and cannot be changed by members.
 - The password form explains the 12–128 character range, passphrases, accepted characters, and password reuse guidance, and asks for the new password twice.
 - After sign-in, sign-out, or an account switch, the header, avatar, branch details, and permissions immediately match the current identity.
