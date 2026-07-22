@@ -9,6 +9,7 @@
 - Sign in with the assigned student ID and password. Security checks begin when the page loads, and submission is unavailable until verification completes.
 - A valid session can be restored automatically. Initial passwords must be changed, and old sessions on other devices expire after a password change.
 - The sign-in page uses the platform's warm visual palette and provides entries for branch onboarding, sign-in feedback, and public files.
+- The concept page, sign-in assistance area, desktop sidebar, and mobile tools drawer share one automatically updated copyright notice.
 - Every user can crop an avatar and change the password. Names are maintained by administrators and cannot be changed by members.
 - The password form explains the 12–128 character range, passphrases, accepted characters, and password reuse guidance, and asks for the new password twice.
 - After sign-in, sign-out, or an account switch, the header, avatar, branch details, and permissions immediately match the current identity.
@@ -66,7 +67,11 @@
 ## Notification Center
 
 - Automatically receive platform releases, branch settings, content publications or updates, role changes, account security, backups, and deletion decisions.
-- Unread items are clearly marked and become read after opening. Once the bell is opened, previously counted unread messages are represented by a dot; only later unread messages restore the number. Phones use an easy-to-close bottom notification panel. Details support rich text, images, attachments, and related-page links.
+- Filter the list to unread items or mark all currently visible notifications as read.
+- Opening the list without opening each detail changes existing counts to a dot. A later message or another mutation of the same content restores a numeric badge.
+- A content publication creates one notification; later edits update the same notification and append a complete mutation timeline instead of creating repeated messages.
+- A new member receives a welcome notice and the full latest platform release. Only platform-wide notices from the last two months are retained; when that window is empty, the latest two are shown.
+- Phones use an easy-to-close bottom notification panel. The drawer, cards, and details keep a fixed rounded frame with internal scrolling, and details clear the bottom navigation. Rich text, images, attachments, and related-page links remain supported.
 - Administrative notices include the operator, Beijing time, and detailed changes. Deletion decisions are sent to all affected branch members.
 - System administrators can publish flexible notifications and search both manual and automatic archives by category, scope, and keyword.
 
@@ -105,3 +110,9 @@ Rich-text images are inserted at the current cursor as centered block media. Edi
 - Branch usage is based on actual R2 ownership. Source files, watermark derivatives, and branch avatars all count toward the same branch quota and are shown as separate totals to system administrators.
 - New content revision entries show the actual title, summary, body-text, publishing-setting, formatting, and activity-cover changes. Existing historical summaries remain unchanged.
 - The visible product version remains 2.1.
+
+# v2.1.4 Production Update (July 23, 2026)
+
+- Refined desktop page height, entry-page typography, mobile management access, metric cards, and tools drawers while reducing repeated avatar loading during navigation.
+- Added unread filtering, mark-all-read, structured automatic notices, concise new-member history, and content-level notification aggregation.
+- Standardized the copyright notice across four platform surfaces. The visible major version remains 2.1, while the formal release archive is version 2.1.4.
