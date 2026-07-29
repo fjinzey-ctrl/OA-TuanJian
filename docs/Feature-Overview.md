@@ -2,6 +2,15 @@
 
 [中文原文 / Chinese version](功能总览.md)
 
+## v2.1.5 Update Summary
+
+- The sign-in security check completes before account data is queried. Automatic retries no longer flash a failure before succeeding, while the server still requires a valid challenge result.
+- Cookie and privacy choices are available from the sign-in page, desktop sidebar, settings menu, and mobile tools drawer, all using the cookie icon. Existing and new members must make an explicit choice; declining causes a safe sign-out.
+- Branch content is fixed to “Visible within Branch.” Only system administrators can choose “Visible across Platform” or “Public.” Lists are newest-first, and pinned items appear first with a distinct visual treatment.
+- Public resources and the signed-in emblem, flag, and anthem entry use the same published records. Changes to public visibility update both listings and file access.
+- Publication and later changes to the same item remain aggregated into one notification. A new change moves it back to the top and restores its unread reminder. Revision history is collapsed by default and expands newest-first.
+- Draft, archived, and published saves have status-specific feedback. A pinned draft clearly states that pinning becomes visible only after publication. Hovering a truncated attachment name reveals the full filename.
+
 ## Sign-In and Accounts
 
 - Opening the root site first shows the product introduction page. “Sign In” opens the dedicated sign-in page, while “View Public Files” opens public resources directly.
@@ -13,6 +22,7 @@
 - Every user can crop an avatar and change the password. Names are maintained by administrators and cannot be changed by members.
 - The password form explains the 12–128 character range, passphrases, accepted characters, and password reuse guidance, and asks for the new password twice.
 - After sign-in, sign-out, or an account switch, the header, avatar, branch details, and permissions immediately match the current identity.
+- Active sessions renew during use but remain bounded by inactivity and absolute lifetime limits. Signing out or changing a password invalidates the relevant old sessions.
 
 ## Home and Navigation
 
