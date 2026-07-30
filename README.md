@@ -2,7 +2,7 @@
 
 OA 团建服务平台面向多个团支部提供信息发布、活动回顾、团费协作、规范资料、成员管理、通知、备份和平台治理。不同支部数据相互隔离，成员只能访问与本人身份和所属支部相符的内容。
 
-v2.1.5 已于 2026-07-29 正式上线。本轮强化登录验证、会话 Cookie、受保护附件水印和公共资料授权；登录页及平台内提供通俗的 Cookie 与隐私选择，现有和新成员均需明确选择。内容按发布时间由新到旧排列，支持置顶强调；公开资料与团徽、团旗、团歌入口保持同步；内容异动通知自动回到顶部，修改记录默认折叠。站内可见大版本继续显示 2.1。
+v2.1.6 已于 2026-07-30 正式上线。本轮改善慢网络登录验证和公开 PDF 加载，新增 24 小时活动会话、30 天“记住此设备”及多设备管理；公开资料与团徽、团旗、团歌入口统一读取最新资料，支部删除保留成员账号与设备记录，空间占用按实际成员行为归属。头像编辑、公开资料卡片和长对象路径也完成精简。站内可见大版本继续显示 2.1。
 
 2026-07-19 门户体验更新已正式上线：访问母站首先进入产品概念页，点击“登录”进入独立登录页面，点击“查看公开文件”直接进入公开资料。概念页内的产品窗口使用虚构信息演示成员端与管理端主要结构，不读取真实账号、支部、缴费或附件数据。版本号保持 2.1，本次未发送全平台更新通知。
 
@@ -61,7 +61,7 @@ v2.1.5 已于 2026-07-29 正式上线。本轮强化登录验证、会话 Cookie
 
 The OA Youth League Service Platform provides multiple Youth League branches with information publishing, activity reviews, fee coordination, official resources, member administration, notifications, backups, and platform governance. Branch data is isolated, and members can access only content permitted by their role and branch affiliation.
 
-The portal experience update was released on July 19, 2026. The root site now opens a product introduction page, “Sign In” leads to the dedicated sign-in page, and “View Public Files” opens public resources directly. The embedded product windows use fictional information and never read real accounts, branches, fee records, or attachments. The version remains 2.1, and this release did not send a platform-wide notification.
+Version 2.1.6 was released on July 30, 2026. It improves slow-network sign-in verification and public PDF loading, adds a 24-hour active session, 30-day remembered-device option, and multi-device management, and keeps public resources synchronized across visitor and signed-in views. Branch deletion preserves member accounts and device records, while storage is attributed to the responsible member's branch. The visible product version remains 2.1.
 
 Version 2.1 Refinement was formally released on July 18, 2026. This repository presents complete product capabilities, user guides, and feedback channels only. It does not provide source code, deployment materials, or internal technical documentation.
 

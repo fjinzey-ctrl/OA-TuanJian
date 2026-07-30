@@ -2,14 +2,15 @@
 
 [中文原文 / Chinese version](功能总览.md)
 
-## v2.1.5 Update Summary
+## v2.1.6 Update Summary
 
-- The sign-in security check completes before account data is queried. Automatic retries no longer flash a failure before succeeding, while the server still requires a valid challenge result.
-- Cookie and privacy choices are available from the sign-in page, desktop sidebar, settings menu, and mobile tools drawer, all using the cookie icon. Existing and new members must make an explicit choice; declining causes a safe sign-out.
-- Branch content is fixed to “Visible within Branch.” Only system administrators can choose “Visible across Platform” or “Public.” Lists are newest-first, and pinned items appear first with a distinct visual treatment.
-- Public resources and the signed-in emblem, flag, and anthem entry use the same published records. Changes to public visibility update both listings and file access.
-- Publication and later changes to the same item remain aggregated into one notification. A new change moves it back to the top and restores its unread reminder. Revision history is collapsed by default and expands newest-first.
-- Draft, archived, and published saves have status-specific feedback. A pinned draft clearly states that pinning becomes visible only after publication. Hovering a truncated attachment name reveals the full filename.
+- On slow networks, the page no longer interrupts the human-verification challenge with its own retries. Sign-in still waits for a valid result, and the server continues to enforce verification.
+- An ordinary session keeps a 24-hour active window while the site remains in use. Sign-in can remember a device for 30 days, and one account may be used on multiple devices.
+- “Mine — Devices” merges sessions by actual device and shows browser, operating system, device type, this-device status, online status, last activity, and active-session count. Users can name or revoke unfamiliar devices.
+- Public PDFs load in requested ranges. Public resources and the signed-in emblem, flag, and anthem entry use the same latest records, while member-facing cards omit author and date.
+- Avatars in navigation and administration lists open a large preview. On “Mine,” selecting the circular avatar opens the editor and first shows the current avatar at a larger size.
+- Editors can enter their branch storage statistics reliably. Long object paths are truncated with a full hover view, preserving the type, size, and latest-update columns.
+- Branch deletion still requires backup and approval, but member accounts, passwords, avatars, trusted devices, and sign-in records remain. Storage created by a member is attributed to that member's branch.
 
 ## Sign-In and Accounts
 
