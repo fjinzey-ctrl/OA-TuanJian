@@ -2,6 +2,16 @@
 
 [中文原文 / Chinese version](功能总览.md)
 
+## v2.1.7 Update Summary
+
+- Core interface fonts are now lightweight first-party assets loaded early, while compressed document fonts load on demand. Layout remains consistent on slow networks and phones with custom system fonts.
+- Pages show structured loading states and reuse local caches for longer. Public PDFs use larger range chunks and retain retry, open-in-new-page, and original-download actions.
+- The Devices page groups browser sessions by device and shows this-device status, online state, operating system, recent activity, and coarse network region. Refresh, rename, revoke, and collapsed details are available.
+- The Cookie and privacy notice is a formal scrollable document explaining sign-in, security verification, device recognition, and coarse network data. The new policy version requires a fresh choice.
+- Notification changes reach the bell and toast sooner. A notification detail opens above the still-open list, so closing the detail returns directly to the same list.
+- Storage views emphasize file name and source while treating object paths as truncated auxiliary information. Member tables, device cards, and mobile overlays no longer collapse under long text or sit behind bottom navigation.
+- The user-facing role name is simplified to “Member”; legacy import labels remain compatible.
+
 ## v2.1.6 Update Summary
 
 - On slow networks, the page no longer interrupts the human-verification challenge with its own retries. Sign-in still waits for a valid result, and the server continues to enforce verification.

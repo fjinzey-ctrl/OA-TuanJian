@@ -2,7 +2,7 @@
 
 OA 团建服务平台面向多个团支部提供信息发布、活动回顾、团费协作、规范资料、成员管理、通知、备份和平台治理。不同支部数据相互隔离，成员只能访问与本人身份和所属支部相符的内容。
 
-v2.1.6 已于 2026-07-30 正式上线。本轮改善慢网络登录验证和公开 PDF 加载，新增 24 小时活动会话、30 天“记住此设备”及多设备管理；公开资料与团徽、团旗、团歌入口统一读取最新资料，支部删除保留成员账号与设备记录，空间占用按实际成员行为归属。头像编辑、公开资料卡片和长对象路径也完成精简。站内可见大版本继续显示 2.1。
+v2.1.7 已于 2026-08-02 正式上线。本轮进一步改善大陆网络与移动端字体、页面和公开 PDF 的加载稳定性；设备管理补充在线状态、粗粒度网络地区、刷新与清晰的信息分层；Cookie 与隐私说明改为正式可滚动条款。通知详情保持通知列表展开，空间统计、成员表格和移动端浮窗也完成窄屏修复。用户可见角色名称统一为“成员”，站内可见大版本继续显示 2.1。
 
 2026-07-19 门户体验更新已正式上线：访问母站首先进入产品概念页，点击“登录”进入独立登录页面，点击“查看公开文件”直接进入公开资料。概念页内的产品窗口使用虚构信息演示成员端与管理端主要结构，不读取真实账号、支部、缴费或附件数据。版本号保持 2.1，本次未发送全平台更新通知。
 
@@ -61,7 +61,7 @@ v2.1.6 已于 2026-07-30 正式上线。本轮改善慢网络登录验证和公�
 
 The OA Youth League Service Platform provides multiple Youth League branches with information publishing, activity reviews, fee coordination, official resources, member administration, notifications, backups, and platform governance. Branch data is isolated, and members can access only content permitted by their role and branch affiliation.
 
-Version 2.1.6 was released on July 30, 2026. It improves slow-network sign-in verification and public PDF loading, adds a 24-hour active session, 30-day remembered-device option, and multi-device management, and keeps public resources synchronized across visitor and signed-in views. Branch deletion preserves member accounts and device records, while storage is attributed to the responsible member's branch. The visible product version remains 2.1.
+Version 2.1.7 was released on August 2, 2026. It improves font, page, and public-PDF loading on slow and mobile networks; adds clearer device grouping, online status, coarse network location, and refresh controls; and presents the Cookie and privacy notice as a formal scrollable document. Notification details now keep the notification list open, while storage tables, member tables, and mobile overlays have been refined for narrow screens. The visible product version remains 2.1.
 
 Version 2.1 Refinement was formally released on July 18, 2026. This repository presents complete product capabilities, user guides, and feedback channels only. It does not provide source code, deployment materials, or internal technical documentation.
 
