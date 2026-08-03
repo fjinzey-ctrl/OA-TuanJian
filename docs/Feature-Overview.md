@@ -2,6 +2,14 @@
 
 [中文原文 / Chinese version](功能总览.md)
 
+## v2.1.8 Update Summary
+
+- The original publisher remains accountable, while editing can be shared with selected administrators and editors in the same branch; all eligible collaborators are selected by default.
+- At most one fee item can be published for a period. Each formal archive maps to one fee item, revocation requires a recorded reason, and archive details cannot be deleted.
+- Administrators can add, update, or clear single and batch payment notes. Saving refreshes the related lists and dashboard without changing payment status or confirmation time.
+- Mobile workspace feedback, the fee dashboard card, role menus, global alerts, and collapsed settings were refined. All time-zone labels now use `GMT+8:00`.
+- Both normal and remembered sessions have a fixed 30-day absolute lifetime from initial authentication. Current privacy choices are kept separately from time-limited detailed audits.
+
 ## v2.1.7 Update Summary
 
 - Core interface fonts are now lightweight first-party assets loaded early, while compressed document fonts load on demand. Layout remains consistent on slow networks and phones with custom system fonts.
