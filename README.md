@@ -1,39 +1,59 @@
 # OA 团建服务平台
 
-OA 团建服务平台面向多个团支部提供信息发布、活动回顾、团费协作、规范资料、成员管理、通知、备份和平台治理。不同支部数据相互隔离，成员只能访问与本人身份和所属支部相符的内容。
+OA 团建服务平台面向多个团支部提供内容发布、活动回顾、团费协作、公开资料、成员管理、通知、备份和平台治理。不同支部的数据相互隔离，用户只能访问与本人身份、所属支部和内容可见范围相符的信息。
 
-v2.1.8 已于 2026-08-03 正式上线。本轮完善内容协作授权与首次发布责任，强化团费内容、正式归档和理由撤销的对应留痕，并在管理端加入单条与批量缴费备注。手机工作台反馈、概览卡片、角色下拉、全局提醒、设置折叠和操作后自动刷新同步优化；会话增加固定 30 天绝对上限，隐私当前选择与历史审计分开维护。站内可见大版本继续显示 2.1。
+当前正式版本为 **v2.1.9**，于 **2026-08-13** 发布。
 
-2026-07-19 门户体验更新已正式上线：访问母站首先进入产品概念页，点击“登录”进入独立登录页面，点击“查看公开文件”直接进入公开资料。概念页内的产品窗口使用虚构信息演示成员端与管理端主要结构，不读取真实账号、支部、缴费或附件数据。版本号保持 2.1，本次未发送全平台更新通知。
+- 正式站点：<https://oa-tuanjian.pages.dev>
+- 问题反馈：[GitHub Issues](https://github.com/fjinzey-ctrl/OA-TuanJian/issues)
+- 仓库用途：公开产品能力、使用指南和反馈渠道；不提供源代码、部署材料或内部技术文档。
 
-2.1 完善版已于 2026-07-18 正式发布。本仓库仅用于介绍完整功能、提供使用指南和收集反馈，不提供源代码、部署材料或内部技术文档。
+## v2.1.9 更新重点
 
-2026-07-14 内测跟进已同步：适应页宽的连续 PDF、发布标题与中英文字体规则、详细功能帮助、手机表单布局，以及文件上传和团费归档撤销的可操作错误说明。
-
-最新跟进补充通知跳转自动收起、团费深链回跳、归档后默认重置、清晰的改密规则、编辑空间统计，以及文本、表格、Word 和图片等更多附件预览。历史 TXT 类型现已兼容；无法可靠预览的音频等附件只显示下载。访问量接近每日免费额度时，平台会暂时展示静态高峰提示并在额度重置后恢复。
-
-静态高峰提示页使用与正式站点一致的小旗标识，不会读取账号、内容、团费或附件数据。
-
-平台每 10 分钟检查一次账号级免费请求额度；达到 80% 保护阈值后启用静态高峰提示，额度重置后自动恢复。
-
-2026-07-17 的 2.1 完善 Preview 增加正文图片高度、团建指定封面、平台用户批量冻结、五类通知存档，以及默认/图床/本地文件三种头像来源。外链头像通过本站安全检查后复制保存；短时大量下载、多网络来源登录和反复危险链接会形成只面向系统管理员的“安全提醒”，不记录原始 IP、完整链接或附件正文。
-
-最新修补进一步明确图片文件的生命周期：关闭附件区显示不会破坏正文图片；只有图片也从正文和团建封面移除并确认保存后，系统才清理源文件。平台用户卡片补充头像并优化批量选择排版；冻结账号会直接显示“账号被冻结”。外链头像若实际返回网页或安全验证页，会明确提示改用可直接返回图片文件的公开地址。
-
-2026-07-18 正式收尾进一步统一空间统计口径：来源文件、水印衍生文件和支部头像都计入对应支部的 1.5 GiB 默认限额，并在系统管理页分项展示。新产生的内容修改记录会具体列出标题、摘要、正文文字和发布设置的变化。版本号继续保持 2.1。
+- 平台用户管理恢复为信息更完整的多维表格，便于系统管理员集中查看账号、身份、支部和状态。
+- 支部删除改为严格的最终版备份与全体管理员一致同意流程；备份失效或任何管理员不同意时，流程必须重新开始。
+- 自动通知改为后台异步处理，业务操作完成后由通知中心校验并发送，减少通知延迟对操作结果的影响。
+- 新增通俗、紧凑的行为审计页面，以“谁在什么时间对什么对象做了什么”为主线呈现重要操作。
+- 原资料入口统一为“公开资料”，按“团务资料、现行规定、学习资料”分类；匿名访客只能查看前两类中的公开内容。
+- 匿名访客进入公开资料后，安全检测在后台完成，不阻塞首屏；异常或疑似机器行为会被阻止继续停留。
+- 团费支付区域进入重构准备阶段：暂不允许团费正文图片和附件，但缴费确认、统计和归档仍正常使用；没有当期团费时隐藏无效操作区。
+- 管理概览空间占用与空间统计统一使用实际存储口径；富文本编辑器按需加载，并支持逐段决定是否首行缩进。
+- 站内各入口开始显示完整版本号 **2.1.9**；管理概览提供简洁的“刷新”按钮。
 
 ## 主要能力
 
-- 登录与反馈：页面加载后开始安全检测，验证前不可提交；访客可直接申请支部入驻或反馈登录问题。
-- 支部协作：首页、公示、团建、团费和规范资料覆盖日常团务，支持富文本、图片、附件、修改记录和明确空状态。
-- 内容管理：编辑与管理员可拖入、粘贴或选择文件，发布者责任固定，编辑仅修改本人内容。
-- 成员与账号：普通账号全平台唯一且最多属于一个支部；移出支部不删除账号、密码、头像或历史责任记录。
-- 通知中心：自动接收平台升级、设置与内容变化、身份调整、备份和管理决定；支持未读筛选、全部标为已读及同一内容异动聚合，并展示操作人、时间与完整变更详情。
-- 支部治理：系统管理员维护支部、容量、备份、删除审批、公共资料和平台用户；支部唯一管理员受到保护。
-- 账号安全：系统管理员可冻结或批量管理平台账号；安全提醒使用哈希和计数发现明显异常，不展示用户原始网络地址或外链内容。
-- 多端体验：桌面侧栏与手机专用五项底部导航分别适配；每个主要模块提供功能概览，窄屏长文字保持可读，通知在手机端以易关闭的面板展示。
+### 成员使用
 
-## 文档
+- 查看本支部公示、团建回顾和团费内容。
+- 确认本人团费状态，查看缴费进度和历史归档。
+- 阅读平台公开资料和平台内学习资料。
+- 管理头像、密码、登录设备、Cookie 与隐私选择。
+- 接收平台更新、内容异动、身份调整和安全提醒。
+
+### 内容与支部管理
+
+- 编辑和管理员可创建富文本内容，管理附件、发布状态、置顶状态和修改记录。
+- 首次发布者永久保留；发布者可把编辑权限开放给本支部指定管理员或编辑。
+- 管理员可维护成员、团费状态、单条或批量缴费备注、支部设置和空间使用情况。
+- 支部业务数据与其他支部隔离；移出支部不会删除平台账号、密码、头像或历史责任记录。
+
+### 系统管理
+
+- 维护平台用户、支部目录、容量、公开资料和全平台通知。
+- 查看经过字段清理的行为审计，快速定位重要操作的主体、对象、时间和结果。
+- 管理最终版备份与支部删除流程；最终删除前再次核验下载凭证、备份有效性和全体管理员意见。
+- 查看平台与支部空间统计，处理账号冻结、角色调整和安全提醒。
+
+## 角色与权限
+
+| 身份 | 主要权限 |
+| --- | --- |
+| 成员 | 查阅获授权内容、确认本人团费状态、使用资料、管理本人账号与设备 |
+| 编辑 | 拥有成员能力，并可发布和修改本人负责或获授权协作的内容 |
+| 管理员 | 管理本支部内容、成员、团费、设置和空间；不能永久删除平台账号 |
+| 系统管理员 | 管理平台用户、支部、公开资料、通知、审计、容量、备份和删除流程 |
+
+## 使用文档
 
 - [完整功能总览（中文）](docs/功能总览.md)
 - [Complete Feature Overview (English)](docs/Feature-Overview.md)
@@ -44,42 +64,66 @@ v2.1.8 已于 2026-08-03 正式上线。本轮完善内容协作授权与首次�
 - [隐私与安全使用须知](docs/隐私与安全使用须知.md)
 - [问题反馈指南](docs/问题反馈指南.md)
 
-## 角色
+## 安全与反馈边界
 
-| 身份       | 主要权限                                                                     |
-| ---------- | ---------------------------------------------------------------------------- |
-| 成员       | 查阅本支部内容、确认团费状态、使用规范资料、管理本人头像和密码               |
-| 编辑       | 拥有成员能力，可发布、修改自己负责的内容并查看本支部空间统计                 |
-| 管理员     | 管理本支部内容、成员、团费、资料和空间；可移出非管理员但不能永久删除平台账号 |
-| 系统管理员 | 管理平台通知、公共资料、支部目录、容量、备份、支部管理员和平台用户账号       |
-
-如需反馈，请前往仓库 Issues 并遵循[问题反馈指南](docs/问题反馈指南.md)。请勿公开密码、成员名单、缴费材料、内部附件或其他敏感信息。
+反馈问题时，请提供脱敏后的操作步骤、页面、浏览器、设备类型和 `GMT+8:00` 时间。请勿在公开 Issue 中提交密码、Cookie、会话值、成员名单、缴费材料、内部附件或其他敏感信息。
 
 ---
 
 # OA Youth League Service Platform
 
-The OA Youth League Service Platform provides multiple Youth League branches with information publishing, activity reviews, fee coordination, official resources, member administration, notifications, backups, and platform governance. Branch data is isolated, and members can access only content permitted by their role and branch affiliation.
+The OA Youth League Service Platform supports multiple Youth League branches with content publishing, activity reviews, fee coordination, public resources, member administration, notifications, backups, and platform governance. Data is isolated between branches, and users can access only information permitted by their role, branch affiliation, and content visibility.
 
-Version 2.1.8 was released on August 3, 2026. It adds controlled content collaboration while preserving the original publisher, strengthens the one-to-one audit trail between fee content and formal archives, and adds single or batch payment notes for administrators. Mobile workspace feedback, dashboard layout, role menus, alerts, collapsed settings, and automatic refreshes were refined. Sessions now have a fixed 30-day absolute lifetime, and current privacy choices are maintained separately from time-limited detailed audits. The visible product version remains 2.1.
+The current production release is **v2.1.9**, published on **August 13, 2026**.
 
-Version 2.1 Refinement was formally released on July 18, 2026. This repository presents complete product capabilities, user guides, and feedback channels only. It does not provide source code, deployment materials, or internal technical documentation.
+- Production: <https://oa-tuanjian.pages.dev>
+- Feedback: [GitHub Issues](https://github.com/fjinzey-ctrl/OA-TuanJian/issues)
+- Repository scope: public product capabilities, user guides, and feedback channels only; no source code, deployment material, or internal technical documentation is provided.
 
-The latest update fixes previewing for historical TXT metadata, hides preview controls for unsupported files such as anthem audio, and temporarily switches to a static peak-traffic notice when daily service usage approaches the free allowance. Full access resumes after the allowance resets.
+## v2.1.9 Highlights
 
-The platform checks the account-level free request allowance every 10 minutes. At the 80% protection threshold, it enables the static peak-traffic notice and restores full access after the allowance resets.
-
-The July 17 Preview adds resizable body images, explicit activity covers, batch account freezing, five archive categories, and default/URL/local avatar sources. Remote avatars are validated and copied into platform storage. Security alerts use counts and irreversible hashes rather than raw IP addresses, full URLs, or attachment contents.
+- Platform users are presented in a richer multidimensional table for faster account, role, branch, and status review.
+- Branch deletion now requires a valid final backup, download evidence from both sides, and unanimous approval from all branch administrators. An expired backup or any rejection restarts the workflow.
+- Automatic notifications are processed asynchronously by a validation and delivery center after the business operation succeeds.
+- A compact behavior-audit page explains who acted, what was changed, which object was affected, and when it happened.
+- Resources are unified under “Public Resources” and grouped into League Affairs, Current Rules, and Learning Resources. Anonymous visitors can access only public items in the first two categories.
+- Anonymous security verification runs in the background after the resource page appears. Failed or suspicious checks prevent the visitor from remaining on the page.
+- The fee payment area is prepared for a later redesign: fee-body images and attachments are temporarily unavailable, while confirmation, statistics, and archiving remain available.
+- Dashboard storage totals now use the same actual-storage calculation as the storage page. The rich-text editor loads on demand and supports paragraph-level first-line indentation.
+- Product surfaces now show the full version number **2.1.9**, and the management dashboard uses a concise Refresh action.
 
 ## Main Capabilities
 
-- Sign-in and feedback: security checks begin when the page loads, submission is unavailable before verification, and visitors can request branch onboarding or report sign-in problems directly.
-- Branch collaboration: home, notices, activities, fees, and official resources support daily work, rich text, images, attachments, revision records, and clear empty states.
-- Content management: editors and administrators can drag, paste, or select files. Publisher responsibility is fixed, and editors can modify only their own content.
-- Members and accounts: each ordinary account is unique across the platform and belongs to at most one branch. Removal from a branch preserves the account, password, avatar, and historical responsibility records.
-- Notification center: automatically receive platform releases, settings and content changes, role updates, backups, and administrative decisions with the operator, time, and detailed changes.
-- Branch governance: system administrators maintain branches, capacity, backups, deletion approval, public resources, and platform users. Every branch's sole administrator is protected.
-- Multi-device experience: desktop side navigation and a phone-specific five-item bottom navigation are provided. Each main module includes a quick feature overview, long text remains readable on narrow screens, and notifications open in an easy-to-close mobile panel.
+### Member Experience
+
+- Read authorized branch notices, activity reviews, and fee content.
+- Confirm personal fee status and review progress and archive history.
+- Use public resources and platform-only learning resources.
+- Manage avatar, password, signed-in devices, and privacy choices.
+- Receive platform releases, content updates, role changes, and security alerts.
+
+### Content and Branch Administration
+
+- Editors and administrators can create rich content and manage files, publication state, pinning, and revision history.
+- The first publisher is permanently retained. The publisher may grant editing access to selected administrators or editors in the same branch.
+- Administrators can maintain members, fee status, single or batch fee notes, branch settings, and storage usage.
+- Branch data remains isolated. Removing a member from a branch does not delete the platform account, password, avatar, or historical responsibility records.
+
+### System Administration
+
+- Maintain platform users, branches, capacity, public resources, and platform-wide notifications.
+- Review sanitized behavior audits with clear actors, targets, times, and outcomes.
+- Manage final backups and branch-deletion workflows, with a final verification of download evidence, backup validity, and unanimous approval.
+- Review platform and branch storage, account restrictions, roles, and security alerts.
+
+## Roles
+
+| Role | Main permissions |
+| --- | --- |
+| Member | Read authorized content, confirm personal fee status, use resources, and manage the member account and devices |
+| Editor | All member abilities, plus publishing and editing responsible or explicitly shared content |
+| Administrator | Manage branch content, members, fees, settings, and storage without permanently deleting platform accounts |
+| System administrator | Manage platform users, branches, public resources, notifications, audits, capacity, backups, and deletion workflows |
 
 ## Documentation
 
@@ -92,16 +136,6 @@ The July 17 Preview adds resizable body images, explicit activity covers, batch 
 - [Privacy and Safe-Use Notice](docs/隐私与安全使用须知.md)
 - [Feedback Guide](docs/问题反馈指南.md)
 
-## Roles
+## Security and Feedback Boundary
 
-| Role                 | Main permissions                                                                                                                            |
-| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| Member               | Read branch content, confirm fee status, use official resources, and manage the member's avatar and password                                |
-| Editor               | All member capabilities, plus publishing and editing content for which the editor is responsible                                            |
-| Administrator        | Manage branch content, members, fees, details, and storage; remove non-administrators without permanently deleting platform accounts        |
-| System administrator | Manage platform notifications, public resources, the branch directory, capacity, backups, branch administrators, and platform user accounts |
-
-To provide feedback, open a repository Issue and follow the [Feedback Guide](docs/问题反馈指南.md). Do not publicly share passwords, member lists, fee materials, internal attachments, or other sensitive information.
-# 2026-07-17 · 2.1 使用说明更新
-
-通知和内容编辑现支持在光标位置插入居中图片，并分别控制正文与附件区显示；已发布内容保存后会自动进入成员端页面。空间统计包含源文件、水印衍生文件与头像，支部默认空间为 1.5 GiB。透明背景头像现在会保留透明区域。
+When reporting a problem, provide sanitized steps, page names, browser and device type, and the relevant `GMT+8:00` time. Never post passwords, cookies, session values, member lists, fee materials, internal attachments, or other sensitive information in a public Issue.

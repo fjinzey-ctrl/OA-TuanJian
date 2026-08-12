@@ -2,6 +2,16 @@
 
 [中文原文 / Chinese version](功能总览.md)
 
+## v2.1.9 Update Summary
+
+- Platform users now appear in a multidimensional table. A separate behavior-audit page presents important actions through plain-language actor, action, target, time, and controlled-detail fields.
+- Branch deletion requires a final backup, download evidence from the system administrator and at least one branch administrator, unanimous approval from all branch administrators, and final system-administrator confirmation. An expired backup or any rejection restarts the workflow.
+- Automatic notifications are validated and delivered asynchronously after the business operation succeeds.
+- Public Resources are grouped into League Affairs, Current Rules, and Learning Resources. Learning Resources are platform-only, while anonymous visitors can access only public items in the first two categories.
+- Anonymous visitors see the resource page immediately while security verification runs in the background. Failed or suspicious checks prevent continued access.
+- Fee content temporarily excludes body images and attachments, while confirmation, statistics, and archiving remain available. Without a published fee item, only the current-period message and archive history appear.
+- Dashboard storage uses actual storage totals. The rich-text editor loads on demand and supports paragraph-level indentation. Product surfaces show the full version number 2.1.9.
+
 ## v2.1.8 Update Summary
 
 - The original publisher remains accountable, while editing can be shared with selected administrators and editors in the same branch; all eligible collaborators are selected by default.
@@ -25,7 +35,7 @@
 - On slow networks, the page no longer interrupts the human-verification challenge with its own retries. Sign-in still waits for a valid result, and the server continues to enforce verification.
 - An ordinary session keeps a 24-hour active window while the site remains in use. Sign-in can remember a device for 30 days, and one account may be used on multiple devices.
 - “Mine — Devices” merges sessions by actual device and shows browser, operating system, device type, this-device status, online status, last activity, and active-session count. Users can name or revoke unfamiliar devices.
-- Public PDFs load in requested ranges. Public resources and the signed-in emblem, flag, and anthem entry use the same latest records, while member-facing cards omit author and date.
+- Public PDFs load in requested ranges. The unified Public Resources entry uses the latest system-administrator records, while member-facing cards omit author and date.
 - Avatars in navigation and administration lists open a large preview. On “Mine,” selecting the circular avatar opens the editor and first shows the current avatar at a larger size.
 - Editors can enter their branch storage statistics reliably. Long object paths are truncated with a full hover view, preserving the type, size, and latest-update columns.
 - Branch deletion still requires backup and approval, but member accounts, passwords, avatars, trusted devices, and sign-in records remain. Storage created by a member is attributed to that member's branch.
@@ -65,10 +75,10 @@
 - After selecting “I Have Paid,” the button turns green; an administrator verifies the final status.
 - Without an active fee notice, payment status cannot be changed and misleading payment entry points are hidden.
 - Administrators can verify members individually or in batches. Each fee notice has only one active member-by-member archive.
-- Archiving always saves a complete snapshot and resets current member statuses to unpaid. Archives can be expanded, deleted, or revoked with a reason when allowed, and a revoked archive can be recreated.
+- Archiving saves a complete snapshot and resets current member statuses to unpaid. Archive details cannot be deleted; correcting a previous archive requires a recorded revocation reason, and the original archive and revocation trail remain available.
 - A direct fee-page link returns to the fee page after sign-in or the required first password change.
 
-## Emblem, Flag, Anthem, and Official Resources
+## Public Resources
 
 - Visitors and signed-in users can view published resources from the public entry regardless of branch.
 - Usage guidelines load after selection. Resources can be previewed or downloaded with separate mobile and desktop controls.
@@ -78,10 +88,10 @@
 
 - Editors and administrators can create notices, activities, and fee content as drafts, published items, or archives.
 - Editors and administrators can view storage statistics scoped to their own branch.
-- The editor supports headings, lists, quotations, links, alignment, images, and freely inserted attachments.
-- Files can be selected, dragged, or pasted, with upload progress. Each attachment follows the size guidance shown on the page.
+- Notice and activity editors support headings, lists, quotations, links, alignment, images, and freely inserted attachments. Fee content temporarily excludes body images and attachments.
+- For supported content types, files can be selected, dragged, or pasted with upload progress. Each attachment follows the size guidance shown on the page.
 - The publisher is the current user's name and cannot be hidden or changed. Revision logs are appended automatically.
-- Editors see all same-type branch items but can modify only their own; administrators can manage every item in their branch.
+- Editors see all same-type branch items and can modify items they first published or for which the publisher explicitly granted collaboration access; administrators can manage every item in their branch.
 - Leaving with unsaved changes triggers a warning, and pending attachment deletions occur only after a successful save.
 
 ## Members, Roles, and Accounts
@@ -111,7 +121,8 @@
 - The platform notifies all users near the free allowance and pauses storage-increasing actions at the protection threshold.
 - System administrators can export a complete branch backup containing content, status, authors, dates, logs, members, fee details, and original attachments.
 - Preparation and download progress are visible, leaving is blocked until completion, and the latest backup is required before branch deletion.
-- The first administrator decision locks the current deletion request, and the result is sent to the system administrator and every branch member.
+- The latest final backup must be downloaded by the system administrator and at least one current branch administrator. A data change invalidates that backup and restarts the workflow.
+- Every administrator captured when the request starts must vote. Unanimous approval is required; any rejection invalidates the request and backup, after which the system administrator must restart from a new final backup.
 
 ## Multi-Device Experience
 
@@ -120,7 +131,7 @@
 - Uploads, downloads, saves, archives, and backups provide loading, progress, or completion feedback.
 - Published titles are centered and automatically shrink to one line when no subtitle is present. English body text prefers Times New Roman, Chinese text falls back to FangSong, and code blocks use Calibri.
 - Help panels explain the page purpose, available actions, permissions, and safety notes. Error messages identify the affected object, likely cause, save state, and next action instead of exposing a bare HTTP status.
-- Complete times are labeled “Beijing Time GMT+8:00,” and reduced-motion device preferences are respected.
+- Complete times are labeled `GMT+8:00`, and reduced-motion device preferences are respected.
 - The platform checks the account-level free request allowance every 10 minutes. At the 80% protection threshold, the site switches to a static peak-traffic notice. Accounts and business data remain safe, and full functionality returns automatically after the allowance resets at 08:00 Beijing time.
 - The static notice uses the same flag logo as the main site and does not read account, content, payment, or attachment data.
 # 2.1 Refinement (2026-07-17)
