@@ -2,6 +2,14 @@
 
 [中文原文 / Chinese version](功能总览.md)
 
+## v2.1.10 Update Summary
+
+- Notification-event wakeups, rich-text sanitization, anonymous public-resource verification, branch-storage redaction, and device-session semantics were hardened.
+- The rich-text editor is prepared earlier and no longer stalls on circular initialization. Installed standard document fonts are preferred, with first-party compressed fonts as fallback; content remains visible while fonts load.
+- Closing an avatar preview no longer redirects to Profile, fee content no longer exposes HTML markup, and help/copy controls were refreshed.
+- Watermark derivatives older than 30 days are removed automatically and regenerated from protected sources on the next authorized access. Source files, avatars, and notification assets are excluded.
+- Product surfaces show the full version number 2.1.10.
+
 ## v2.1.9 Update Summary
 
 - Platform users now appear in a multidimensional table. A separate behavior-audit page presents important actions through plain-language actor, action, target, time, and controlled-detail fields.

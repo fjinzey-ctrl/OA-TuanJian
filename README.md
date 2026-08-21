@@ -2,11 +2,19 @@
 
 OA 团建服务平台面向多个团支部提供内容发布、活动回顾、团费协作、公开资料、成员管理、通知、备份和平台治理。不同支部的数据相互隔离，用户只能访问与本人身份、所属支部和内容可见范围相符的信息。
 
-当前正式版本为 **v2.1.9**，于 **2026-08-13** 发布。
+当前正式版本为 **v2.1.10**，于 **2026-08-21** 发布。
 
 - 正式站点：<https://oa-tuanjian.pages.dev>
 - 问题反馈：[GitHub Issues](https://github.com/fjinzey-ctrl/OA-TuanJian/issues)
 - 仓库用途：公开产品能力、使用指南和反馈渠道；不提供源代码、部署材料或内部技术文档。
+
+## v2.1.10 更新重点
+
+- 强化通知事件、富文本清理、匿名公开资料核验、支部空间信息脱敏和设备会话语义，保持既有权限与数据边界。
+- 富文本编辑器提前准备并修复初始化等待；正文优先使用设备中的国标字体，本站字体作为后备，内容无需等待字体后才显示。
+- 修复头像大图关闭误跳转、团费正文显示 HTML 标签等问题，并同步更新全站功能帮助和开发者邮箱复制入口。
+- 超过 30 天的水印衍生缓存由独立维护任务清理，下次授权打开时从仍受保护的源文件重新生成；源文件不受该清理规则影响。
+- 版本号统一为 **2.1.10**，完整技术与发布记录在项目内部留档。
 
 ## v2.1.9 更新重点
 
@@ -74,11 +82,19 @@ OA 团建服务平台面向多个团支部提供内容发布、活动回顾、�
 
 The OA Youth League Service Platform supports multiple Youth League branches with content publishing, activity reviews, fee coordination, public resources, member administration, notifications, backups, and platform governance. Data is isolated between branches, and users can access only information permitted by their role, branch affiliation, and content visibility.
 
-The current production release is **v2.1.9**, published on **August 13, 2026**.
+The current production release is **v2.1.10**, published on **August 21, 2026**.
 
 - Production: <https://oa-tuanjian.pages.dev>
 - Feedback: [GitHub Issues](https://github.com/fjinzey-ctrl/OA-TuanJian/issues)
 - Repository scope: public product capabilities, user guides, and feedback channels only; no source code, deployment material, or internal technical documentation is provided.
+
+## v2.1.10 Highlights
+
+- Notification events, rich-text sanitization, anonymous public-resource verification, branch-storage redaction, and device-session semantics were hardened without widening permissions.
+- The rich-text editor is prepared earlier and no longer waits on a circular initialization state. Content uses locally installed standard document fonts first, with first-party web fonts as a fallback.
+- Closing an avatar preview no longer redirects to Profile, fee content no longer exposes HTML tags, and help/copy controls were refreshed.
+- Watermark derivatives older than 30 days are removed by an isolated maintenance task and regenerated from protected source files on the next authorized access. Source files are not covered by this cleanup.
+- Product surfaces now show the full version number **2.1.10**.
 
 ## v2.1.9 Highlights
 
