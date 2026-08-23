@@ -2,11 +2,20 @@
 
 OA 团建服务平台面向多个团支部提供内容发布、活动回顾、团费协作、公开资料、成员管理、通知、备份和平台治理。不同支部的数据相互隔离，用户只能访问与本人身份、所属支部和内容可见范围相符的信息。
 
-当前正式版本为 **v2.1.10**，于 **2026-08-21** 发布。
+当前正式版本为 **v2.1.11**，于 **2026-08-24** 发布。
 
 - 正式站点：<https://oa-tuanjian.pages.dev>
 - 问题反馈：[GitHub Issues](https://github.com/fjinzey-ctrl/OA-TuanJian/issues)
 - 仓库用途：公开产品能力、使用指南和反馈渠道；不提供源代码、部署材料或内部技术文档。
+
+## v2.1.11 更新重点
+
+- 附件区支持带放置位置提示的拖动排序；上传后由编辑者逐个决定是否及在何处插入正文。
+- 只对 PDF、图片、文本等浏览器可靠预览的格式显示预览入口；Office 等不支持格式保留下载。
+- 有编辑权限的用户可从正式内容页点击“点击编辑”直达已获取最新数据的编辑器；修改记录同步覆盖附件变更。
+- 系统管理员可调整公开资料顺序和单文件上传上限；关键管理页面补齐刷新操作，进入主要子页时静默获取最新数据。
+- 修复设备重命名，优化行为审计详情排版和支部删除流程图；扩展过期水印衍生缓存的安全清理兼容，源文件不受影响。
+- 版本号统一为 **2.1.11**，完整技术与发布记录在项目内部留档。
 
 ## v2.1.10 更新重点
 
@@ -82,11 +91,20 @@ OA 团建服务平台面向多个团支部提供内容发布、活动回顾、�
 
 The OA Youth League Service Platform supports multiple Youth League branches with content publishing, activity reviews, fee coordination, public resources, member administration, notifications, backups, and platform governance. Data is isolated between branches, and users can access only information permitted by their role, branch affiliation, and content visibility.
 
-The current production release is **v2.1.10**, published on **August 21, 2026**.
+The current production release is **v2.1.11**, published on **August 24, 2026**.
 
 - Production: <https://oa-tuanjian.pages.dev>
 - Feedback: [GitHub Issues](https://github.com/fjinzey-ctrl/OA-TuanJian/issues)
 - Repository scope: public product capabilities, user guides, and feedback channels only; no source code, deployment material, or internal technical documentation is provided.
+
+## v2.1.11 Highlights
+
+- Attachments can be reordered with a visible drop-position cue. Editors decide per file whether and where it is inserted into the body.
+- Preview actions appear only for formats the browser can reliably render, such as PDFs, images, and text. Unsupported Office formats remain download-only.
+- Authorized collaborators can select “Edit” from a published content page and enter an editor that fetches the latest saved data; revision records now cover attachment changes.
+- System administrators can reorder Public Resources and configure the per-file upload limit. Key management pages have dedicated refresh actions, while primary subpages silently refresh their data on entry.
+- Device renaming, audit-detail layout, the branch-deletion flow diagram, and safe legacy watermark-derivative cleanup were refined without changing source files.
+- Product surfaces now show the full version number **2.1.11**.
 
 ## v2.1.10 Highlights
 
