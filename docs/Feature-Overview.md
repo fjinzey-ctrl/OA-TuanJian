@@ -4,9 +4,12 @@
 
 ## v2.1.11 Update Summary
 
-- Attachments can be reordered with a visible drop-position cue. Editors decide per file whether and where it is inserted into the body, and preview actions appear only for browser-native formats.
+- Attachments can be reordered with a visible drop-position cue. Editors decide per file whether and where it is inserted, and compact cards reflow for narrow desktop panels and phones.
+- Images, PDFs, text, DOCX, XLSX, and PPTX can expand in place, with multiple files open at once. PDFs and Office files also have an immersive standalone viewer without site navigation.
+- Office files are parsed only in the current browser and are not sent to Microsoft or another third party. Central loading stages, progress, timeouts, retry, and download fallback are provided.
 - Authorized users can select “Edit” from a published content page and enter an editor that fetches the latest saved data. Revision records include attachment additions, removals, order changes, and body-insertion state.
-- System administrators can reorder Public Resources and configure their per-file upload limit. Public Resources, notification archives, platform users, and fee statistics have dedicated refresh actions.
+- System administrators can reorder Public Resources and configure their per-file upload limit. Office resources share the first-party viewer, while notification archives, platform users, and fee statistics have dedicated refresh actions.
+- A new-alert toast opens the notification center directly on the corresponding message.
 - Primary subpages silently fetch current data on entry. Device renaming, audit-detail layout, and the branch-deletion approval flow were refined.
 - Safe cleanup now recognizes legacy watermark-derivative keys and walks every results page; source files, avatars, and notification assets remain excluded.
 - Product surfaces show the full version number 2.1.11.
@@ -82,7 +85,7 @@
 
 - Browse only published content from the member's branch, with search, filtering, sorting, and continuous same-module navigation.
 - Details support rich text, images, attachment preview, and downloads. Notice attachments and activity images can be embedded in the body.
-- Online preview covers PDFs, TXT/LOG, CSV, Markdown, JSON, XML, and images. Historical TXT metadata with charset parameters is recognized correctly. Office files, audio, and complex legacy formats show download only, without a non-working preview control.
+- Online preview covers PDFs, TXT/LOG, CSV, Markdown, JSON, XML, images, DOCX, XLSX, and PPTX. Office files are parsed locally in the current browser and are not sent to a third-party online viewer. Audio and unsupported complex legacy formats remain download-only without a misleading preview control.
 - Revision records identify the operator, time, status change, and summary and are visible to authorized members.
 - Protected files display markings related to the current user during preview or download.
 
